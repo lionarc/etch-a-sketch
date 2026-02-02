@@ -1,0 +1,18 @@
+.row-container {
+    display: flex;
+    background-color: DodgerBlue;
+}
+
+.col {
+    flex: 1;
+    border: 1px solid black;
+    height: 200px;
+    background-color: blue;
+}
+
+.row {
+    flex: 1;
+    border: 1px solid black;
+    height: 100px;
+    background-color: lightblue;
+}
