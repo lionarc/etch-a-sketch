@@ -1,18 +1,15 @@
 .row-container {
     display: flex;
-    background-color: DodgerBlue;
+    background-color: rgb(158, 220, 255);
 }
 
 .col {
     flex: 1;
-    border: 1px solid black;
-    height: 200px;
-    background-color: blue;
+    border: 1px solid rgb(71, 209, 255);
+    height: 50px;
+    background-color: rgb(168, 233, 250);
 }
 
 .row {
-    flex: 1;
-    border: 1px solid black;
-    height: 100px;
-    background-color: lightblue;
+    width: 50px;
 }
