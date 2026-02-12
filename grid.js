@@ -36,10 +36,17 @@ function colorOn(event) {
     }
 }
 
+function createRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function colorOff(event) {
   const target = event.target;
     if (target.classList.contains("col")) { 
-        target.style.backgroundColor = "white";
+        target.style.backgroundColor = createRandomColor();
     }
 }
 
