@@ -13,3 +13,13 @@
 .row {
     width: 50px;
 }
+
+.button {
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(71, 209, 255);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
