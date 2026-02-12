@@ -1,17 +1,22 @@
 .row-container {
     display: flex;
+    flex-direction: column;
     background-color: rgb(158, 220, 255);
+    width: 960px;
+    height: 960px;
 }
 
 .col {
     flex: 1;
     border: 1px solid rgb(71, 209, 255);
-    height: 50px;
     background-color: rgb(168, 233, 250);
+    min-width: 0;
+    min-height: 0;
 }
 
 .row {
-    width: 50px;
+    display: flex;
+    flex: 1;
 }
 
 .button {
