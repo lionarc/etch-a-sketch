@@ -30,9 +30,22 @@ button.addEventListener("click", () => {
 
 
 function colorOn(event) {
-  const target = event.target;
-    if (target.classList.contains("col")) { 
-        target.style.backgroundColor = "black";
+    const target = event.target;
+    if (target.classList.contains("col")) {
+        // Hole aktuellen Dunkelheitswert oder setze auf 0
+        let darken = parseInt(target.getAttribute("data-darken") || "0", 10);
+        if (darken < 10) darken += 1; // Maximal 10 Schritte
+        target.setAttribute("data-darken", darken);
+
+        // Berechne neue Farbe (von hellblau zu schwarz)
+        // Startfarbe: rgb(168, 233, 250)
+        // Schrittweise Richtung rgb(0,0,0)
+        const start = { r: 168, g: 233, b: 250 };
+        const factor = 1 - darken * 0.1;
+        const r = Math.round(start.r * factor);
+        const g = Math.round(start.g * factor);
+        const b = Math.round(start.b * factor);
+        target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }
 }
 
@@ -45,9 +58,6 @@ function createRandomColor() {
 
 function colorOff(event) {
   const target = event.target;
-    if (target.classList.contains("col")) { 
-        target.style.backgroundColor = createRandomColor();
-    }
 }
 
 for (let i = 0; i < x; i++) {
